@@ -1,0 +1,22 @@
+{
+  "name": "refactored-pancake",
+  "version": "0.0.0",
+  "description": "Front-End template instance generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bpander/refactored-pancake.git"
+  },
+  "author": "Brad Anderson <brad.anderson87@gmail.com>",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/bpander/refactored-pancake/issues"
+  },
+  "homepage": "https://github.com/bpander/refactored-pancake",
+  "devDependencies": {
+    "jsdoc-parse": "1.2.7"
+  }
+}
