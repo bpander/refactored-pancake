@@ -1,7 +1,10 @@
-{% from "../partial.html" import partial %}
 
-{{ partial('./hero/_hero.html', {
-    hero: 'yes'
+{% set foo = 'bar' %}
+
+{{ partial('./tests/hero/_hero.html', json('./tests/hero/instances/homeHero.json')) }}
+
+{{ partial('./tests/hero/_hero.html', {
+    hero: 'two'
 }) }}
 
 <p>end of _bio</p>
