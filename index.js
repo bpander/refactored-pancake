@@ -1,16 +1,15 @@
 'use strict';
 
 const nunjucks = require('nunjucks');
+const env = nunjucks.configure();
 
-
-const loader = new nunjucks.FileSystemLoader('tests');
-const env = new nunjucks.Environment(loader);
-const res = env.render('./bio/_bio.html', {
+const res = nunjucks.render('tests/bio/_bio.html', {
     partial: function (path, model) {
         const ctx = Object.assign({}, this.ctx, model);
-        return new nunjucks.runtime.SafeString(env.render(path, ctx));
+        return new nunjucks.runtime.SafeString(nunjucks.render(path, ctx));
     },
     json: function (path) {
+        const loader = env.loaders[0];
         const source = loader.getSource(path);
         return JSON.parse(source.src);
     }
