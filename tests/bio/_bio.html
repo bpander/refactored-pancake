@@ -1,10 +1,13 @@
 
 {% set foo = 'bar' %}
 
-{{ partial('./tests/hero/_hero.html', json('./tests/hero/instances/homeHero.json')) }}
+{{ partial('hero/_hero.html', json('hero/instances/homeHero.json')) }}
 
-{{ partial('./tests/hero/_hero.html', {
+{{ partial('hero/_hero.html', {
     hero: 'two'
 }) }}
+
+`hero` should be empty:
+{% include 'hero/_hero.html' %}
 
 <p>end of _bio</p>
