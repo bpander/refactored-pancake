@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/bpander/refactored-pancake",
   "devDependencies": {
-    "jsdoc-parse": "1.2.7"
+    "doctrine": "1.2.0",
+    "nunjucks": "2.3.0"
   }
 }
